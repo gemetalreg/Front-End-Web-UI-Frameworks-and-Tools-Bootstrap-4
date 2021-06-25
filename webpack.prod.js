@@ -10,7 +10,7 @@ var HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = merge(common, {
   mode: "production",
   output: {
-    filename: "[name].[contentHash].bundle.js",
+    filename: "[name].[chunkhash].bundle.js",
     path: path.resolve(__dirname, "dist"),
   },
   optimization: {
@@ -18,17 +18,12 @@ module.exports = merge(common, {
       new CssMinimizerPlugin(),
       new TerserPlugin(),
       new HtmlWebpackPlugin({
-        template: "./src/template.html",
-        minify: {
-          removeAttributeQuotes: true,
-          collapseWhitespace: true,
-          removeComments: true,
-        },
+        template: "./src/aboutus.html",
       }),
     ],
   },
   plugins: [
-    new MiniCssExtractPlugin({ filename: "[name].[contentHash].css" }),
+    new MiniCssExtractPlugin({ filename: "styles.css" }),
     new CleanWebpackPlugin(),
   ],
   module: {
