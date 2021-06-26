@@ -7,9 +7,40 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
+    <link rel="stylesheet" href="../node_modules/bootstrap-social/bootstrap-social.css">
   </head>
 
   <body>
+    <nav class="navbar navbar-dark navbar-expand-sm bg-primary fixed-top">
+      <div class="container">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#Navbar"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#">Ristorante Con Fusion</a>
+        <div class="collapse navbar-collapse" id="Navbar">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#"><i class="fas fa-home fa-lg"></i> Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./aboutus.html"><i class="fas fa-info fa-lg"></i> About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><i class="fas fa-list fa-lg"></i> Menu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><i class="fas fa-address-card fa-lg"></i> Conatct</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
     <header class="jumbotron">
       <div class="container">
         <div class="row row-header">
@@ -28,10 +59,10 @@
 
     <div class="container">
       <div class="row">
-        <div class="col">
-          <h3>About Us</h3>
-          <hr />
-        </div>
+        <ol class="col-12 breadcrumb">
+          <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
+          <li class="breadcrumb-item active">About Us</li>
+        </ol>
       </div>
 
       <div class="row py-5">
@@ -122,20 +153,21 @@
               121, Clear Water Bay Road<br />
               Clear Water Bay, Kowloon<br />
               HONG KONG<br />
-              Tel.: +852 1234 5678<br />
-              Fax: +852 8765 4321<br />
-              Email: <a href="mailto:confusion@food.net">confusion@food.net</a>
+              <i class="fas fa-phone fa-lg"></i>: +852 1234 5678<br>
+                      <i class="fas fa-fax fa-lg"></i>: +852 8765 4321<br>
+                      <i class="fas fa-envelope fa-lg"></i>: 
+                      <a href="mailto:confusion@food.net">confusion@food.net</a>
             </address>
           </div>
           <div class="col-12 col-sm-4 align-self-center">
-            <div class="text-center">
-              <a href="http://google.com/+">Google+</a>
-              <a href="http://www.facebook.com/profile.php?id=">Facebook</a>
-              <a href="http://www.linkedin.com/in/">LinkedIn</a>
-              <a href="http://twitter.com/">Twitter</a>
-              <a href="http://youtube.com/">YouTube</a>
-              <a href="mailto:">Mail</a>
-            </div>
+                    <div class="text-center">
+                        <a class="btn btn-social-icon btn-google" href="http://google.com/+"><i class="fab fa-google-plus"></i></a>
+                        <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id="><i class="fab fa-facebook"></i></a>
+                        <a class="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/"><i class="fab fa-linkedin"></i></a>
+                        <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-social-icon btn-google" href="http://youtube.com/"><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-social-icon" href="mailto:"><i class="fab fa-envelope-o"></i></a>
+                    </div>
           </div>
         </div>
         <div class="row justify-content-center">

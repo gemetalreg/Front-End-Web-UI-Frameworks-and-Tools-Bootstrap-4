@@ -11,12 +11,21 @@ module.exports = {
         type: "javascript/auto",
       },
       {
-        test: /\.(svg|png|jpg|gif)$/,
+        test: /\.(png|svg|jpg|jpeg|gif)$/,
         type: "asset/resource",
         generator: {
           filename: "imgs/[name].[hash].[ext]",
         },
       },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        type: 'asset/resource',
+        generator: {
+          filename: "fonts/[name].[hash].[ext]",
+        },
+
+      },
+
     ],
   },
 };
