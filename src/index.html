@@ -2,23 +2,22 @@
 <html lang="en">
   <head>
     <title>Ristorante Con Fusion: About Us</title>
-    <!-- Required meta tags always come first -->
     <meta charset="utf-8" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
   </head>
 
   <body>
-    <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
+    <nav class="navbar navbar-dark navbar-expand-sm bg-primary fixed-top">
       <div class="container">
         <button
           class="navbar-toggler"
           type="button"
-          data-toggle="collapse"
-          data-target="#Navbar"
+          data-bs-toggle="collapse"
+          data-bs-target="#Navbar"
+          aria-label="Toggle navigation"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -26,30 +25,29 @@
         <div class="collapse navbar-collapse" id="Navbar">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-              <a class="nav-link" href="./index.html"
-                ><span class="fa fa-home fa-lg"></span> Home</a
+              <a class="nav-link active" href="#"
+                ><i class="fas fa-home fa-lg"></i> Home</a
               >
             </li>
             <li class="nav-item">
               <a class="nav-link" href="./aboutus.html"
-                ><span class="fa fa-info fa-lg"></span> About</a
+                ><i class="fas fa-info fa-lg"></i> About</a
               >
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#"
-                ><span class="fa fa-list fa-lg"></span> Menu</a
+                ><i class="fas fa-list fa-lg"></i> Menu</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="#"
-                ><span class="fa fa-address-card fa-lg"></span> Contact</a
+              <a class="nav-link" href="./contactus.html"
+                ><i class="fas fa-address-card fa-lg"></i> Contact</a
               >
             </li>
           </ul>
         </div>
       </div>
     </nav>
-
     <header class="jumbotron">
       <div class="container">
         <div class="row row-header">
@@ -69,47 +67,61 @@
     <div class="container" id="main">
       <div class="row">
         <ol class="col-12 breadcrumb">
-          <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
-          <li class="breadcrumb-item active">Contact Us</li>
+          <li class="breadcrumb-item active">
+            <a href="./index.html">Home</a>
+          </li>
         </ol>
-        <div class="col-12">
-          <h3>Contact Us</h3>
-          <hr />
-        </div>
       </div>
 
-      <div class="row row-content">
-        <div class="col-12">
-          <h3>Location Information</h3>
+      <div>
+        <div>
+          <div>
+            <h3>Our Lipsmacking Culinary Creations</h3>
+          </div>
+          <div>
+            <h2>Uthappizza</h2>
+            <p>
+              A unique combination of Indian Uthappam (pancake) and Italian
+              pizza, topped with Cerignola olives, ripe vine cherry tomatoes,
+              Vidalia onion, Guntur chillies and Buffalo Paneer.
+            </p>
+          </div>
         </div>
-        <div class="col-12 col-sm-4 offset-sm-1">
-          <h5>Our Address</h5>
-          <address style="font-size: 100%">
-            121, Clear Water Bay Road<br />
-            Clear Water Bay, Kowloon<br />
-            HONG KONG<br />
-            <i class="fa fa-phone"></i>: +852 1234 5678<br />
-            <i class="fa fa-fax"></i>: +852 8765 4321<br />
-            <i class="fa fa-envelope"></i>:
-            <a href="mailto:confusion@food.net">confusion@food.net</a>
-          </address>
-        </div>
-        <div class="col-12 col-sm-6 offset-sm-1">
-          <h5>Map of our Location</h5>
-        </div>
-        <div class="col-12 col-sm-11 offset-sm-1">Button group goes here</div>
-      </div>
 
-      <div class="row row-content">
-        <div class="col-12">
-          <h3>Send us your Feedback</h3>
+        <div>
+          <div>
+            <h3>This Month's Promotions</h3>
+          </div>
+          <div>
+            <h2>Weekend Grand Buffet</h2>
+            <p>
+              Featuring mouthwatering combinations with a choice of five
+              different salads, six enticing appetizers, six main entrees and
+              five choicest desserts. Free flowing bubbly and soft drinks. All
+              for just $19.99 per person
+            </p>
+          </div>
         </div>
-        <div class="col-12 col-md-9">Form goes here</div>
-        <div class="col-12 col-md"></div>
+
+        <div>
+          <div>
+            <h3>Meet our Culinary Specialists</h3>
+          </div>
+          <div>
+            <h2>Alberto Somayya</h2>
+            <h4>Executive Chef</h4>
+            <p>
+              Award winning three-star Michelin chef with wide International
+              experience having worked closely with whos-who in the culinary
+              world, he specializes in creating mouthwatering Indo-Italian
+              fusion experiences.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
 
-    <footer class="footer">
+    <footer class="footer py-3">
       <div class="container">
         <div class="row">
           <div class="col-4 offset-1 col-sm-2">
@@ -127,9 +139,9 @@
               121, Clear Water Bay Road<br />
               Clear Water Bay, Kowloon<br />
               HONG KONG<br />
-              <i class="fa fa-phone fa-lg"></i>: +852 1234 5678<br />
-              <i class="fa fa-fax fa-lg"></i>: +852 8765 4321<br />
-              <i class="fa fa-envelope fa-lg"></i>:
+              <i class="fas fa-phone fa-lg"></i>: +852 1234 5678<br />
+              <i class="fas fa-fax fa-lg"></i>: +852 8765 4321<br />
+              <i class="fas fa-envelope fa-lg"></i>:
               <a href="mailto:confusion@food.net">confusion@food.net</a>
             </address>
           </div>
