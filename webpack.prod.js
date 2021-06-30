@@ -17,8 +17,10 @@ module.exports = merge(common, {
     minimizer: [
       new CssMinimizerPlugin(),
       new TerserPlugin(),
+      new HtmlWebpackPlugin(),
       new HtmlWebpackPlugin({
         template: "./src/aboutus.html",
+        filename: "aboutus.html",
       }),
     ],
   },

@@ -12,6 +12,11 @@ module.exports = merge(common, {
   plugins: [
     new HtmlWebpackPlugin({
       template: "./src/aboutus.html",
+      filename: "index.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/contactus.html",
+      filename: "contactus.html",
     }),
   ],
   module: {
@@ -25,7 +30,7 @@ module.exports = merge(common, {
           },
           {
             // Run postcss actions
-               loader: "postcss-loader",
+            loader: "postcss-loader",
             options: {
               // `postcssOptions` is needed for postcss 8.x;
               // if you use postcss 7.x skip the key
@@ -36,12 +41,12 @@ module.exports = merge(common, {
                 },
               },
             },
-          },          
+          },
           {
             // translates CSS into CommonJS modules
             loader: "css-loader",
           },
-        ]
+        ],
       },
       {
         test: /\.scss$/,
