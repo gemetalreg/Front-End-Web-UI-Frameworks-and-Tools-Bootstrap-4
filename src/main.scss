@@ -9,6 +9,13 @@ body {
   min-height: 100vh;
 }
 
+.row-content {
+  margin: 0px auto;
+  padding: 50px 0px 50px 0px;
+  border-bottom: 1px ridge;
+  min-height: 400px;
+}
+
 #main {
   flex-grow: 1;
 }
