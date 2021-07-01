@@ -1,7 +1,7 @@
 @import "~bootstrap/scss/bootstrap";
 
 body {
-  padding: 50px 0px 0px 0px;
+  padding: 3rem 0 0 0;
   z-index: 0;
 
   display: flex;
@@ -11,12 +11,13 @@ body {
 
 .row-content {
   margin: 0px auto;
-  padding: 50px 0px 50px 0px;
+  padding: 2rem 0 2rem 0;
   border-bottom: 1px ridge;
-  min-height: 400px;
+  min-height: 12rem;
 }
 
 #main {
+  padding-top: 1rem;
   flex-grow: 1;
 }
 .navbar-dark {
