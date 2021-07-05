@@ -14,17 +14,21 @@ module.exports = merge(common, {
     path: path.resolve(__dirname, "dist"),
   },
   optimization: {
-    minimizer: [
-      new CssMinimizerPlugin(),
-      new TerserPlugin(),
-      new HtmlWebpackPlugin(),
-      new HtmlWebpackPlugin({
-        template: "./src/aboutus.html",
-        filename: "aboutus.html",
-      }),
-    ],
+    minimizer: [new CssMinimizerPlugin(), new TerserPlugin()],
   },
   plugins: [
+    new HtmlWebpackPlugin({
+      template: "./src/index.html",
+      filename: "index.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/aboutus.html",
+      filename: "aboutus.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/contactus.html",
+      filename: "contactus.html",
+    }),
     new MiniCssExtractPlugin({ filename: "styles.css" }),
     new CleanWebpackPlugin(),
   ],
