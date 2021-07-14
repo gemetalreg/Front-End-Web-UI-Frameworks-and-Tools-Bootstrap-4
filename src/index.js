@@ -14,4 +14,21 @@ import "@fortawesome/fontawesome-free/scss/brands.scss";
 
 import "../github_modules/bootstrap-social/bootstrap-social.scss";
 
-import {} from "bootstrap";
+import { Carousel } from "bootstrap";
+
+document.addEventListener("DOMContentLoaded", (e) => {
+  var carouselEl = document.querySelector("#mycarousel");
+  var carousel = new Carousel(carouselEl, {
+    interval: 2000,
+  });
+
+  var carouselPause = document.querySelector("#carousel-pause");
+  carouselPause.addEventListener("click", () => {
+    carousel.pause();
+  });
+
+  var carouselPlay = document.querySelector("#carousel-play");
+  carouselPlay.addEventListener("click", () => {
+    carousel.cycle();
+  });
+});
