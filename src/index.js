@@ -22,13 +22,18 @@ document.addEventListener("DOMContentLoaded", (e) => {
     interval: 2000,
   });
 
-  var carouselPause = document.querySelector("#carousel-pause");
-  carouselPause.addEventListener("click", () => {
-    carousel.pause();
-  });
-
-  var carouselPlay = document.querySelector("#carousel-play");
-  carouselPlay.addEventListener("click", () => {
-    carousel.cycle();
+  var carouselPlayingButton = document.querySelector("#carouselButton");
+  carouselPlayingButton.addEventListener("click", () => {
+    console.log(carouselPlayingButton.querySelector("#carousel-button-icon"));
+    var carousel_button_icon = carouselPlayingButton.querySelector(
+      "#carousel-button-icon"
+    );
+    if (carousel_button_icon.classList.contains("fa-pause")) {
+      carousel.pause();
+      carousel_button_icon.classList.replace("fa-pause", "fa-play");
+    } else if (carousel_button_icon.classList.contains("fa-play")) {
+      carousel.cycle();
+      carousel_button_icon.classList.replace("fa-play", "fa-pause");
+    }
   });
 });
