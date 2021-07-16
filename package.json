@@ -43,5 +43,10 @@
   },
   "dependencies": {
     "clean-webpack-plugin": "^3.0.0"
-  }
+  },
+  "browserslist": [
+    "last 1 version",
+    "> 1%",
+    "IE 10"
+  ]
 }

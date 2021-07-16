@@ -2,6 +2,7 @@ const path = require("path");
 const common = require("./webpack.common");
 const { merge } = require("webpack-merge");
 var HtmlWebpackPlugin = require("html-webpack-plugin");
+const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
 
 module.exports = merge(common, {
   mode: "development",
@@ -22,6 +23,19 @@ module.exports = merge(common, {
       template: "./src/contactus.html",
       filename: "contactus.html",
     }),
+    new ImageMinimizerPlugin({
+      minimizerOptions: {
+        // Lossless optimization with custom option
+        // Feel free to experiment with options for better result for you
+        plugins: [
+          ["gifsicle", { interlaced: true }],
+          ["jpegtran", { progressive: true }],
+          ["optipng", { optimizationLevel: 5 }],
+          // Svgo configuration here https://github.com/svg/svgo#configuration
+          ["svgo"],
+        ],
+      },
+    }),
   ],
   module: {
     rules: [
@@ -35,16 +49,6 @@ module.exports = merge(common, {
           {
             // Run postcss actions
             loader: "postcss-loader",
-            options: {
-              // `postcssOptions` is needed for postcss 8.x;
-              // if you use postcss 7.x skip the key
-              postcssOptions: {
-                // postcss plugins, can be exported to postcss.config.js
-                plugins: function () {
-                  return [require("autoprefixer")];
-                },
-              },
-            },
           },
           {
             // translates CSS into CommonJS modules
@@ -66,16 +70,6 @@ module.exports = merge(common, {
           {
             // Run postcss actions
             loader: "postcss-loader",
-            options: {
-              // `postcssOptions` is needed for postcss 8.x;
-              // if you use postcss 7.x skip the key
-              postcssOptions: {
-                // postcss plugins, can be exported to postcss.config.js
-                plugins: function () {
-                  return [require("autoprefixer")];
-                },
-              },
-            },
           },
           {
             // compiles Sass to CSS
