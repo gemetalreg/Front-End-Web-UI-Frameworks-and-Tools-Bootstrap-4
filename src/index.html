@@ -48,24 +48,24 @@
             </li>
           </ul>
 
-          <span class="navbar-text" role="button">
-            <a data-bs-toggle="modal" data-bs-target="#loginModal">
-              <span class="fas fa-sign-in-alt"></span> Login
-            </a>
+          <span class="navbar-text" role="button" id="login-modal-btn">
+            <a> <span class="fas fa-sign-in-alt"></span> Login </a>
           </span>
         </div>
       </div>
     </nav>
 
-    <div id="loginModal" class="modal fade" role="dialog">
+    <div id="login-modal" class="modal fade" role="dialog">
       <div class="modal-dialog modal-lg" role="content">
         <!-- Modal content-->
         <div class="modal-content">
           <div class="modal-header">
             <h4 class="modal-title">Login</h4>
-            <button type="button" class="close" data-bs-dismiss="modal">
-              &times;
-            </button>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
           </div>
           <div class="modal-body">
             <form>
@@ -151,8 +151,7 @@
             <a
               role="button"
               class="btn btn-block nav-link btn-warning p-3 fw-bold"
-              data-bs-toggle="modal"
-              data-bs-target="#reserve-form"
+              id="reserve-form-btn"
             >
               Reverse table</a
             >

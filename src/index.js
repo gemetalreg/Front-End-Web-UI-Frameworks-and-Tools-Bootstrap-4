@@ -1,6 +1,8 @@
+import "./variables.scss";
 import "./main.scss";
 import "./header.scss";
 import "./footer.scss";
+import "./modal.scss";
 
 // import '@fortawesome/fontawesome-free/js/fontawesome'
 // import '@fortawesome/fontawesome-free/js/solid'
@@ -14,9 +16,19 @@ import "@fortawesome/fontawesome-free/scss/brands.scss";
 
 import "../github_modules/bootstrap-social/bootstrap-social.scss";
 
-import { Carousel } from "bootstrap";
+import { Carousel, Modal } from "bootstrap";
 
 document.addEventListener("DOMContentLoaded", (e) => {
+  var loginModal = new Modal(document.querySelector("#login-modal"));
+  document.querySelector("#login-modal-btn").addEventListener("click", () => {
+    loginModal.show();
+  });
+
+  var reserveModal = new Modal(document.querySelector("#reserve-form"));
+  document.querySelector("#reserve-form-btn").addEventListener("click", () => {
+    reserveModal.show();
+  });
+
   var carouselEl = document.querySelector("#mycarousel");
   var carousel = new Carousel(carouselEl, {
     interval: 2000,

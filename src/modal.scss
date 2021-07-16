@@ -1,0 +1,18 @@
+@import "./variables.scss";
+
+.modal-content {
+  border: 0;
+}
+
+.modal-header {
+  color: floralwhite;
+  background-color: $background-dark;
+  background-clip: border-box;
+  border: 0;
+}
+
+@each $modal-el in body, footer {
+  .modal-#{$modal-el} {
+    background-color: $background-pale;
+  }
+}

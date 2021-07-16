@@ -1,7 +1,8 @@
 const path = require("path");
 var HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-const InlineChunkHtmlPlugin = require('react-dev-utils/InlineChunkHtmlPlugin');
+const InlineChunkHtmlPlugin = require("react-dev-utils/InlineChunkHtmlPlugin");
+const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
 
 module.exports = {
   mode: "development",
@@ -29,6 +30,19 @@ module.exports = {
       filename: "contactus.html",
     }),
     new InlineChunkHtmlPlugin(HtmlWebpackPlugin, [/bundle/]),
+    new ImageMinimizerPlugin({
+      minimizerOptions: {
+        // Lossless optimization with custom option
+        // Feel free to experiment with options for better result for you
+        plugins: [
+          ["gifsicle", { interlaced: true }],
+          ["jpegtran", { progressive: true }],
+          ["optipng", { optimizationLevel: 5 }],
+          // Svgo configuration here https://github.com/svg/svgo#configuration
+          ["svgo"],
+        ],
+      },
+    }),
     new CleanWebpackPlugin(),
   ],
   module: {

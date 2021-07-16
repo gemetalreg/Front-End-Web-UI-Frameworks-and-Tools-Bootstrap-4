@@ -1,4 +1,6 @@
+@import "./variables.scss";
+
 .footer {
-  background-color: #d1c4e9;
-  padding: 20px 0px 20px 0px;
+  background-color: $background-pale;
+  padding: 1.5rem 0 1.5rem 0;
 }

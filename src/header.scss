@@ -1,8 +1,10 @@
+@import "./variables.scss";
+
 .jumbotron {
-  padding: 70px 30px 70px 30px;
+  padding: 5rem 2.5rem 5rem 2.5rem;
   background: #9575cd;
   color: floralwhite;
 }
 .row-header {
-  padding: 0px;
+  @include hor-centred-with-padds(0, 0);
 }
